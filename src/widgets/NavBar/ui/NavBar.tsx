@@ -16,6 +16,8 @@ interface NavBarProps {
   theme?: LinkTheme;
 }
 
+const ABOUT_ROUTE = '/about'; // TODO: move to config
+
 export const NavBar: React.FC<NavBarProps> = (props) => {
   const { className, theme = LinkTheme.PRIMARY } = props;
   return (
@@ -23,7 +25,7 @@ export const NavBar: React.FC<NavBarProps> = (props) => {
       <ThemeSwitcher />
       <div className={styles.links}>
         <Link to={'/'}>Main</Link>
-        <Link to={'/about'}>About</Link>
+        <Link to={ABOUT_ROUTE}>About</Link>
       </div>
     </div>
   );
