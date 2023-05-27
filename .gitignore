@@ -1,0 +1,5 @@
+build
+node_modules
+extractedTranslations
+.vscode
+.DS_Store

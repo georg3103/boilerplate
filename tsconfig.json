@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    // where TypeScript should look for type definition files (.d.ts)
+    "typeRoots": ["./src/app/types", "./node_modules/@types"],
+    // webpack will do it
+    "outDir": "./build/",
+    // make us set types
+    "noImplicitAny": true,
+    "module": "ESNext",
+    // compile to (browser compitability)
+    "target": "es5",
+    "jsx": "react",
+    // compile ts + js
+    "allowJs": true,
+    "moduleResolution": "node",
+    // common.js -> es modules (allow imports)
+    "esModuleInterop": true,
+    // allow default imports (don't need to write import * as ...)
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    // absolute import
+    "baseUrl": ".",
+    "paths": {
+      // TODO: optimize
+      "@app": ["./src/app/index"],
+      "@pages": ["./src/pages/index"],
+      "@widgets": ["./src/widgets/index"],
+      "@features": ["./src/features/index"],
+      "@entities": ["./src/entities/index"],
+      "@shared": ["./src/shared/index"],
+
+      "@app/*": ["./src/app/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@features/*": ["./src/features/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@shared/*": ["./src/shared/*"],
+    },
+  },
+  "exclude": ["node_modules", "build"],
+  // If the module in compilerOptions in tsconfig.json is commonjs, the setting is complete, else webpack will fail with an error.
+  // This occurs because ts-node does not support any module syntax other than commonjs.
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
