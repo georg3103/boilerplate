@@ -39,5 +39,8 @@
     "import/no-internal-modules": "off", // TODO: fix
     "boundaries/element-types": "off", // TODO: fix
     "boundaries/no-private": [2, { "allowUncles": true }]
+  },
+  "globals": {
+    "__IS_DEV__": true
   }
 }
