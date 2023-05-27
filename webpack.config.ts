@@ -4,8 +4,6 @@ import { buildWebpackConfig, BuildPaths, BuildEnv } from './config/build';
 
 import webpack from 'webpack';
 
-
-
 export default (env: BuildEnv) => {
 
   const paths: BuildPaths = {
