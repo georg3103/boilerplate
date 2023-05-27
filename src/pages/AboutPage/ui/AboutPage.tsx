@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+
 import BumpKit from '@shared/assets/icons/BumpKit.svg'
 
 const AboutPage = () => {

@@ -1,5 +1,5 @@
-import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import webpack from 'webpack';
 
 import { BuildOptions } from '.';
 
@@ -76,4 +76,4 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     svgLoader,
     fileLoader,
   ]
-};
+}

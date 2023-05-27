@@ -1,20 +1,19 @@
-import React, { Suspense } from 'react';
-import cn from 'classnames';
+import cn from 'classnames'
+import React, { Suspense } from 'react'
 
-import { useTheme } from '@app/providers/ThemeProvider';
-import { AppRouter } from '@app/providers/router';
+import { useTranslation } from 'react-i18next'
+import { AppRouter } from '@app/providers/router'
+import { useTheme } from '@app/providers/ThemeProvider'
 
-import { NavBar } from '@widgets/NavBar';
+import { NavBar } from '@widgets/NavBar'
 
-import './styles/index.scss';
-
-import { useTranslation } from 'react-i18next';
+import './styles/index.scss'
 
 const Comp = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
-  const toggle = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
+  const toggle = async (): Promise<void> => {
+    await i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
   }
 
   return (
@@ -22,11 +21,11 @@ const Comp = () => {
       <button onClick={toggle}>chaneLand</button>
       {t('shit')}
     </div>
-  );
+  )
 }
 
 export const App = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   return (
     <div className={cn(['app', theme])}>
@@ -38,5 +37,5 @@ export const App = () => {
         </div>
       </Suspense>
     </div>
-  );
-};
+  )
+}
