@@ -1,5 +1,5 @@
-build
-node_modules
-extractedTranslations
-.vscode
+node_modules/
 .DS_Store
+.idea
+npm-debug.log
+.vscode
