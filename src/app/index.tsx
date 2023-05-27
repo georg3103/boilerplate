@@ -1,8 +1,8 @@
+/* eslint-disable react/display-name */
 import React from 'react';
-import { App } from './App';
-
-import { ThemeProvider } from '@app/providers/ThemeProvider';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@app/providers/ThemeProvider';
+import { App } from './App';
 
 export default () => (
   <BrowserRouter>

@@ -1,8 +1,8 @@
-import React from 'react';
 import cn from 'classnames';
+import React from 'react';
 
-import { Link } from '@shared/ui';
 import { ThemeSwitcher } from '@features/ThemeSwitcher'
+import { Link } from '@shared/ui';
 
 import styles from './NavBar.module.scss';
 

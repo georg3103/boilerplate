@@ -1,5 +1,5 @@
-import React from 'react';
 import cn from 'classnames';
+import React from 'react';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 
 import styles from './Link.module.scss';
